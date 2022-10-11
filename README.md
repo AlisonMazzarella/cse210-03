@@ -54,7 +54,7 @@ Functions:
 
 Files: 
 • README.md
-• main.py
+• director.py
 • parachute.py
 • dictionary.py
 • words.csv 
