@@ -41,16 +41,14 @@ Attributes:
 
 Access Modifiers:
 • Public (no syntax)
-• Protected (_) ex: _correct_guess 
-• Private (__) __incorrect_guess
+• Protected (_) ex: _correct_guess, _incorrect_guess 
+• Private (__) _ _init_ _, _ _name_ _
 
 Functions:
 • main
 • guess
 • calculate
 • create_image 
-• __init__
-• __name__
 
 Files: 
 • README.md
