@@ -53,6 +53,7 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 • hotter
 • colder
 
+<<<<<<< HEAD
 ## Access Modifiers:
 
 • Public (no syntax)
@@ -60,6 +61,12 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 • Private (\_\_) _ _init_ _, _ _name_ \_
 
 ## Functions:
+=======
+Access Modifiers:
+• Public (no syntax)
+• Protected (_) _user, _questions, _hotter, _colder 
+• Private (__) _ _init_ _, _ _name_ _, __correct_guess, __incorrect_guess, __image, __dictionary
+>>>>>>> 0cae06bef6d82204a337b0355ca6eeca0e451fc3
 
 • main
 • guess
