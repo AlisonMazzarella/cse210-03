@@ -41,8 +41,8 @@ Attributes:
 
 Access Modifiers:
 • Public (no syntax)
-• Protected (_) ex: _correct_guess, _incorrect_guess 
-• Private (__) _ _init_ _, _ _name_ _
+• Protected (_) _user, _questions, _hotter, _colder 
+• Private (__) _ _init_ _, _ _name_ _, __correct_guess, __incorrect_guess, __image, __dictionary
 
 Functions:
 • main
