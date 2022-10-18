@@ -3,11 +3,14 @@
 #using randint()
 import random 
 
-# open file
-with open("words.csv", "r") as file:
-    data = file.read()
-    words = data.split()
+#create dictionary class
+class Dictionary: 
+
+#open file + private modifiers added to data and words, if changed will break program
+    with open("words.csv", "r") as file:
+        __data = file.read()
+        __words = __data.split()
 
     #Generating a random number for word position
-    word_pos = random.randint(0, len(words)-1)
-    print("Your word was:", words[word_pos])
+        word_pos = random.randint(0, len(__words)-1)
+        print("Your word was:", __words[word_pos])
