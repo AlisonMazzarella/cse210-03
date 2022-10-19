@@ -1,8 +1,10 @@
 from parachute import Parachute
 from dictionary import Dictionary
 
+
 class Director:
-    """The class responsible for managing the game
+    """
+    The class responsible for managing the game.
 
     Attributes:
         _parachute: An instance of the Parachute class.
@@ -11,11 +13,16 @@ class Director:
         _guess: The player's guess.
         _guessed: List containing the player's previous guesses.
         _output: The string to be displayed at the start of each round.
-        _is_playing:  
+        _is_playing:  A boolean indicating whether the game is currently playing.
     """
-    
+
     def __init__(self):
-        
+        """
+        Constructor for the Director class.
+
+        Args:
+            self (Director): an instance of Director.
+        """
         self._parachute = Parachute()
         self._dict = Dictionary()
         self._word = self._dict.get_word()
@@ -25,28 +32,46 @@ class Director:
         self._is_playing = True
 
     def start_game(self):
-        
+        """
+        Starts the game by running the main game loop.
+
+        Args:
+            self (Director): an instance of Director.
+        """
         while self._is_playing:
             self.update_screen()
             self.game_over()
             self.get_guess()
             self.compare_guess()
-    
-    def update_screen(self):
 
+        self._dict.display_word()
+
+    def update_screen(self):
+        """
+        Displays the output string and parachute, after any relevant changes have been made.
+
+        Args:
+            self (Director): an instance of Director.
+        """
         if not self._is_playing:
             return
-        
+
         if self._guess == "":
             for i in range(len(self._word)):
                 self._output.append("_")
-            
+
         for letter in self._output:
             print(letter, end=" ")
         print(f"{self._parachute.get_parachute()}")
-    
-    def get_guess(self):
 
+    def get_guess(self):
+        """
+        Gets the user's guess, checks if the user has already guessed that letter. 
+        Adds the new guess to the _guessed list
+
+        Args:
+            self (Director): an instance of Director.
+        """
         if not self._is_playing:
             return
 
@@ -55,9 +80,15 @@ class Director:
             print(f"You already guessed: {self._guess}")
             self._guess = input("Guess a letter [a-z]: ")
         self._guessed.append(self._guess)
-    
-    def compare_guess(self):
 
+    def compare_guess(self):
+        """
+        Checks if the guess is in the word the user is trying to guess. 
+        If so, update the output string, if not, reduce the parachte level.
+
+        Args:
+            self (Director): an instance of Director.
+        """
         if not self._is_playing:
             return
 
@@ -65,9 +96,13 @@ class Director:
             self._output[self._word.index(self._guess)] = self._guess
         else:
             self._parachute.reduce_parachute()
-        
-    def game_over(self):
 
+    def game_over(self):
+        """
+        Ends the game if the parachute level is equal to 0.
+
+        Args:
+            self (Director): an instance of Director.
+        """
         if self._parachute.get_parachute_level() == 0:
-            self._dict.display_word()
             self._is_playing = False
