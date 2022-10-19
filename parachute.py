@@ -21,48 +21,48 @@ class Parachute:
         self._parachute = {
             4:
             """
-             _____
-            /_____\ 
-            \     /
-             \   /
-               0
-              /|\ 
-              / \
-            ^^^^^^^ 
+ _____
+/_____\ 
+\     /
+ \   /
+   0
+  /|\ 
+  / \\
+^^^^^^^ 
             """,
             3:
             """
-            /_____\ 
-            \     /
-             \   /
-               0
-              /|\ 
-              / \ 
-            ^^^^^^^
+/_____\ 
+\     /
+ \   /
+   0
+  /|\ 
+  / \ 
+^^^^^^^
             """,
             2:
             """
-            \     /
-             \   /
-               0
-              /|\ 
-              / \ 
-            ^^^^^^^
+\     /
+ \   /
+   0
+  /|\ 
+  / \ 
+^^^^^^^
             """,
             1:
             """
-             \   /
-               0
-              /|\ 
-              / \ 
-            ^^^^^^^
+ \   /
+   0
+  /|\ 
+  / \ 
+^^^^^^^
             """,
             0:
             """
-               x
-              /|\ 
-              / \ 
-            ^^^^^^^
+   x
+  /|\ 
+  / \ 
+^^^^^^^
             """
         }
 
@@ -82,3 +82,8 @@ class Parachute:
             self (Parachute): An instance of Parachute.
         """
         self._parachute_level -= 1
+      
+    def get_parachute_level(self):
+      """Returns the current parachute level
+      """
+      return self._parachute_level
