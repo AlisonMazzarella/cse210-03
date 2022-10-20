@@ -33,7 +33,6 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 • Create array to only accept letters found in the words from dictionary.
 • While loop sends notification letter not found in word or letter found in word.
 • Visual representation that parachute is cut (parachute file imported to main)
-• Play again or quit option
 
 ## Classes:
 
@@ -50,8 +49,6 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 • image
 • questions
 • dictionary
-• hotter
-• colder
 
 ## Access Modifiers:
 
