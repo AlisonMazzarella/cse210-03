@@ -75,7 +75,7 @@ class Director:
         if not self._is_playing:
             return
 
-        self._guess = input("Guess a letter [a-z]: ")
+        self._guess = input("Guess a letter [a-z]: ").lower()
         while self._guess in self._guessed:
             print(f"You already guessed: {self._guess}")
             self._guess = input("Guess a letter [a-z]: ")
