@@ -26,9 +26,9 @@ class Director:
         self._parachute = Parachute()
         self._dict = Dictionary()
         self._word = self._dict.get_word()
-        self._word = "boot"
         self._guess = ""
         self._guessed = []
+        self._correct_guesses = 0
         self._output = []
         self._is_playing = True
 
@@ -98,6 +98,7 @@ class Director:
             positions = [i for i, ltr in enumerate(self._word) if ltr == self._guess]
             for pos in positions:
                 self._output[pos] = self._guess
+                self._correct_guesses += 1
         else:
             self._parachute.reduce_parachute()
 
@@ -109,4 +110,8 @@ class Director:
             self (Director): an instance of Director.
         """
         if self._parachute.get_parachute_level() == 0:
+            print("You Lose!")
+            self._is_playing = False
+        elif len(self._word) == self._correct_guesses:
+            print("You Win!")
             self._is_playing = False
