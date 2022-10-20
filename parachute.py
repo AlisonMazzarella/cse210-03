@@ -32,6 +32,7 @@ class Parachute:
             """,
             3:
             """
+
 /_____\ 
 \     /
  \   /
@@ -42,6 +43,7 @@ class Parachute:
             """,
             2:
             """
+
 \     /
  \   /
    0
@@ -51,6 +53,7 @@ class Parachute:
             """,
             1:
             """
+
  \   /
    0
   /|\ 
@@ -59,6 +62,7 @@ class Parachute:
             """,
             0:
             """
+            
    x
   /|\ 
   / \ 
